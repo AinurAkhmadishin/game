@@ -1,0 +1,10 @@
+.gameBoard {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../../public/images/background_2.png');
+    background-size: cover;
+    font-family: 'Acrom-Medium';
+    color: white;
+}

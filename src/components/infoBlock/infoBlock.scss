@@ -1,0 +1,53 @@
+.infoBlock {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+.block{
+    padding: 0 8px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(circle, rgba(11,0,5,1) 0%, rgba(9,55,121,1) 47%, rgba(6,118,251,1) 100%);
+    width: fit-content;
+    min-width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    
+    &PlayerIcon{
+        margin-right: 8px;
+        background-image: url('../../../public/images/player.png');
+        background-size: cover;   
+        height: 18px;
+        width: 16px;
+    }
+
+    &TimerIcon{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 16px;
+    }
+}
+
+.timer{
+    background-image: url('../../../public/images/timer.png');
+    background-size: cover;
+    width: 28px;   
+    height: 12px;
+    width: 12px;
+    margin-right: 4px;
+
+    &timerText{
+        width: 40px;
+    }
+}
+
+.score{
+    background-image: url('../../../public/images/score.png');
+    background-size: cover;   
+    height: 12px;
+    width: 12px;
+    margin-right: 4px;
+}

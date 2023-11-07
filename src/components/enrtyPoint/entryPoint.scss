@@ -1,0 +1,40 @@
+.entryPoint {
+    width: 800px;
+    height: 500px;
+    background-image: url('../../../public/images/background.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.buttonStart {
+    background-image: url(../../../public/images/btn_background.png) !important;
+    background-size: cover;
+    font-family: 'Acrom-Medium';
+    font-size: 20px !important;
+    width: 200px !important;
+    line-height: 20px;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .ant-btn-icon {
+      margin-left: 8px;
+      order: 1;
+    }
+    &:hover{
+      background: color #000;;
+      opacity:0.6;
+    }
+}
+
+.inputName {
+  font-family: 'Acrom-Medium';
+  font-size: 20px;
+  width: 200px !important;
+  height: 40px;
+}
