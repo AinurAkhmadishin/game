@@ -46,7 +46,6 @@ export default () => {
                 type="primary"
                 className="buttonStart"
                 size="large"
-                icon={<img src="/images/icon-start.png" width={30} height={30} alt=''/>}
             >Старт</Button>
         </div>
     )
