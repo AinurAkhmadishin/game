@@ -25,7 +25,7 @@ export default () => {
     return (
         <Modal
             title="Звездочёт"
-            okText={'Next'}
+            okText={'Далее'}
             open={isOpenModal}
             centered
             maskClosable={false}
