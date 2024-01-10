@@ -1,10 +1,8 @@
 import React from "react";
 import clsx from "clsx";
 import './level.scss';
-import {secondsToMmSs} from "../../utils";
 import {setStart} from '../../store/startReducer';
 import {setLevel} from '../../store/levelSlice';
-import {STARGAZER} from "../../const";
 import {useAppDispatch} from "../../hooks/useAppDispatch";
 
 interface Props {
