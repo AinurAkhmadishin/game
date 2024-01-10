@@ -1,41 +1,53 @@
-import {useState, useEffect} from "react";
-import {Button, Input} from 'antd';
+import {Button} from 'antd';
 import { useAppDispatch } from "../../hooks/useAppDispatch";
 import {setStart} from '../../store/startReducer';
+import {STARGAZER} from "../../const";
 import './entryPoint.scss';
+import _ from "lodash";
+import React, {useEffect, useState} from "react";
+import Level from "../level/Level";
+import {setLevel} from "../../store/levelSlice";
 
 export default () => {
-    const [name, setName] = useState('');
     const dispatch = useAppDispatch();
+    const [levelCount, setLevelCount] = useState(0);
+
+    useEffect(() => {
+        if(!localStorage.getItem(STARGAZER)) {
+            localStorage.setItem(STARGAZER, JSON.stringify({}))
+        };
+
+        const obj = localStorage.getItem(STARGAZER) ?? '';
+        const count = Object.keys(JSON.parse(obj));
+        setLevelCount(count.length);
+    }, [])
 
     const onClick = () => {
         dispatch(setStart(true));
-        !localStorage.getItem('name') && localStorage.setItem('name', name);
+        if(!localStorage.getItem(STARGAZER)) localStorage.setItem(STARGAZER, JSON.stringify({}));
+        else {
+            console.log(Object.keys(JSON.parse(localStorage.getItem(STARGAZER)!)).length);
+            dispatch(setLevel(Object.keys(JSON.parse(localStorage.getItem(STARGAZER)!)).length + 1));
+        }
+
     }
 
-    useEffect(() => {
-        setName(localStorage.getItem('name') || '');
-    }, []);
+    const arr = Array(15);
 
     return (
         <div className="entryPoint">
-            <div>Звездочёт</div>
-            <Input
-                value={name}
-                placeholder="Player name"
-                className="inputName"
-                onChange={(e => {
-                    setName(e.target.value);
-                })}
-            />
-            <Button 
-                onClick={onClick} 
+            <div>
+                <div className='entryPointLevels'>
+                    {_.shuffle(arr).map((_, i) => (<Level level={i + 1} isActivate = {levelCount >= i} key={i}/>))}
+                </div>
+            </div>
+            <Button
+                onClick={onClick}
                 type="primary"
                 className="buttonStart"
                 size="large"
-                icon={<img src="/images/icon-start.png" width={30} height={30}/>}
-                disabled = {name.length < 3}
-            >Start</Button>
+                icon={<img src="/images/icon-start.png" width={30} height={30} alt=''/>}
+            >Старт</Button>
         </div>
     )
 }

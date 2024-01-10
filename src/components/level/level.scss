@@ -1,0 +1,30 @@
+.level {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 2px;
+  box-sizing: border-box;
+  color: #504b4b;
+  background-color: #9a9a9a;
+  cursor: not-allowed;
+
+  &Active {
+    background-color: #61c8ff;
+    color: black;
+    cursor: pointer;
+
+    &:hover{
+      color: #fff;
+    }
+  }
+
+
+  &Border{
+    border-radius: 8px;
+  }
+
+}

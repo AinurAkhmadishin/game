@@ -6,9 +6,12 @@
 }
 
 .board{
-    height: 360px;
+    height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    &OtherLevel{
+        height: 360px;
+    }
 }

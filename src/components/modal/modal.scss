@@ -1,0 +1,45 @@
+.ant-btn-default {
+  display: none;
+}
+.ant-modal {
+  width: 250px !important;
+  .ant-modal-content {
+    background-image: url('../../../public/images/top_background.png');
+    background-size: cover;
+    border-radius: 24px;
+  }
+
+  .ant-modal-title {
+    font-size: 18px;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+  }
+}
+
+.ant-modal-header{
+  background: rgba(0, 0, 0, 0) !important;
+
+  &:before{
+    display: block;
+    position: absolute;
+    content: '';
+    background-image: url('../../../public/images/top.png');
+    background-size: 28px 28px;
+    width: 28px !important;
+    height: 28px !important;
+    top: 18px;
+    left: 42px;
+  }
+}
+
+.info {
+  font-size: 18px;
+  text-align: center;
+  color: #ff9d00;
+  font-weight: bold;
+  &Title {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+}

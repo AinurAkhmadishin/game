@@ -1,16 +1,19 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import startReducer from './startReducer'
 import scoreSlice from './scoreSlice';
+import timerSlice from './timerSlice';
+import levelSlice from './levelSlice';
 
-
-const rootReduser = combineReducers({
+const rootReducer = combineReducers({
   startReducer: startReducer,
   scoreSlice,
+  timerSlice,
+  levelSlice
 })
 
 export const store = configureStore({
   reducer: {
-    rootReduser,   
+    rootReducer,
   },
 })
 

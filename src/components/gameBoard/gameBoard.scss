@@ -3,8 +3,15 @@
     height: 500px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-image: url('../../../public/images/background_2.png');
     background-size: cover;
     font-family: 'Acrom-Medium';
     color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 12px;
 }

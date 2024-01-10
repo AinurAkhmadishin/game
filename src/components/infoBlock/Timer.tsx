@@ -1,24 +1,24 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import {useAppSelector} from '../../hooks/useAppSelector'
-import { useAppDispatch } from "../../hooks/useAppDispatch";
+import {setSeconds} from '../../store/timerSlice';
+import {useAppDispatch} from "../../hooks/useAppDispatch";
+import {secondsToMmSs} from "../../utils";
 import './infoBlock.scss';
 
-
 export default () => {
-    const [seconds, setSeconds] = useState(0);
-    const dispatch = useAppDispatch()
-    const {isStopTimer} = useAppSelector((store) => store.rootReduser.startReducer);
+    //const [seconds, setSeconds] = useState(0);
+    const dispatch = useAppDispatch();
+    const {seconds} = useAppSelector((store) => store.rootReducer.timerSlice);
+    const {isStopTimer} = useAppSelector((store) => store.rootReducer.startReducer);
 
     const secondsToMmSs = (seconds: number) => new Date(seconds * 1000)
     .toISOString()
     .slice(14, 19);
-    
-    
 
     useEffect(() => {
         const id = setInterval(() => {
-            !isStopTimer && setSeconds(seconds => seconds + 1)
-         }, 1000);    
+            !isStopTimer && dispatch(setSeconds())
+        }, 1000);
 
         return () => {
             clearInterval(id);

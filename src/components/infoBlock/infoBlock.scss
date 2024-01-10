@@ -14,14 +14,14 @@
     min-width: 100px;
     height: 30px;
     border-radius: 4px;
-    
-    &PlayerIcon{
-        margin-right: 8px;
-        background-image: url('../../../public/images/player.png');
-        background-size: cover;   
-        height: 18px;
-        width: 16px;
-    }
+
+    //&PlayerIcon{
+    //    margin-right: 8px;
+    //    background-image: url('../../../public/images/player.png');
+    //    background-size: cover;
+    //    height: 18px;
+    //    width: 16px;
+    //}
 
     &TimerIcon{
         display: flex;
@@ -34,7 +34,7 @@
 .timer{
     background-image: url('../../../public/images/timer.png');
     background-size: cover;
-    width: 28px;   
+    width: 28px;
     height: 12px;
     width: 12px;
     margin-right: 4px;
@@ -46,7 +46,7 @@
 
 .score{
     background-image: url('../../../public/images/score.png');
-    background-size: cover;   
+    background-size: cover;
     height: 12px;
     width: 12px;
     margin-right: 4px;

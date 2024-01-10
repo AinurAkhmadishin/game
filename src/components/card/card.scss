@@ -8,12 +8,13 @@
     cursor: pointer;
     margin: 2px;
     box-sizing: border-box;
+    color: #000;
 
     &Border{
          border-radius: 8px;
     }
-    
+
     &:hover{
-        color: #000;
+        color: #fff;
     }
 }
