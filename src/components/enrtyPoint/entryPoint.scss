@@ -1,8 +1,7 @@
 .entryPoint {
     width: 800px;
     height: 500px;
-    background-image: url('../../../public/images/background.png');
-    background-size: cover;
+    background-color: rgba(0, 0, 0, .3) ;
     display: flex;
     justify-content: center;
     flex-direction: column;
