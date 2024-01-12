@@ -26,7 +26,6 @@ export default () => {
         dispatch(setStart(true));
         if(!localStorage.getItem(STARGAZER)) localStorage.setItem(STARGAZER, JSON.stringify({}));
         else {
-            console.log(Object.keys(JSON.parse(localStorage.getItem(STARGAZER)!)).length);
             dispatch(setLevel(Object.keys(JSON.parse(localStorage.getItem(STARGAZER)!)).length + 1));
         }
 
