@@ -1,0 +1,29 @@
+/* Пример с числовым значением */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Пример с пикселями */
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Пример с процентами */
+p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/* Пример с em */
+p {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+/* Пример с ключевым словом */
+p {
+    font-size: 16px;
+    line-height: normal;
+}

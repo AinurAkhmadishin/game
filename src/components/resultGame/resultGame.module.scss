@@ -1,0 +1,23 @@
+.container {
+  padding: 24px;
+  display: flex;
+  width: 100%;
+  background-color: bisque;
+  flex-direction: column;
+  min-height: 250px;
+}
+
+.title{
+  margin:  0 auto;
+  padding-bottom:12px ;
+  font-weight: bold;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.button {
+  padding-top: 24px;
+  margin: 0 auto;
+}

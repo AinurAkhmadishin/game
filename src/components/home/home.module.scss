@@ -1,0 +1,11 @@
+.home {
+  margin:  0 auto;
+  text-align: center;
+  color: #C7AA92;
+  font-weight: bold;
+
+  &__img {
+    margin: 16px 0;
+    width: 450px;
+  }
+}
