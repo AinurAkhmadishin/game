@@ -5,4 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none; /* Запрещает выделение текста */
+  -webkit-user-select: none; /* Для поддержки Safari и других WebKit-браузеров */
+  -moz-user-select: none; /* Для поддержки Firefox */
+  -ms-user-select: none; /* Для поддержки Internet Explorer/Edge */
 }

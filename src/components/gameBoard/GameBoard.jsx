@@ -25,6 +25,16 @@ const GameBoard = ({ysdk}) => {
     const questionsCount = data.quiz.length;
     const hasNextQuestion = questionsCount !== step;
 
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            // Генерируем случайный индекс от 0 до i
+            const j = Math.floor(Math.random() * (i + 1));
+            // Меняем местами элементы с индексами i и j
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
     const showFullscreenAdv = () => {
         if (ysdk) {
             ysdk.adv.showFullscreenAdv({
@@ -42,6 +52,8 @@ const GameBoard = ({ysdk}) => {
             });
         }
     };
+
+    console.log(data.quiz.length)
 
     useEffect(() => {
          id = setInterval(() => {

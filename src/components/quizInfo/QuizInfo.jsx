@@ -16,7 +16,7 @@ const QuizInfo = ({second}) => {
             <div>
                 {messages.title}
             </div>
-            <CircularProgress value={second} color='orange.600' max={600} min={0} trackColor='orange.200'>
+            <CircularProgress value={second} color='orange.600' max={600} min={0} trackColor='orange.200' className={styles.timer}>
                 <CircularProgressLabel>{secondsToMinutesAndSeconds(second)}</CircularProgressLabel>
             </CircularProgress>
         </div>

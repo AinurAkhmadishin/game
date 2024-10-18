@@ -7,5 +7,7 @@
   &__img {
     margin: 16px 0;
     width: 450px;
+    -webkit-user-drag: none; /* Для поддержки Safari и других WebKit-браузеров */
+    user-drag: none;
   }
 }
